@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3Wf-wJ-3VA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3Wf-wJ-3VA">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -435,6 +435,30 @@
                                             <segue destination="BPa-2Z-vF4" kind="show" id="cME-WX-lBt"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Enc-2F-nls">
+                                        <rect key="frame" x="0.0" y="288" width="667" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Enc-2F-nls" id="KlB-K6-4Bd">
+                                            <rect key="frame" x="0.0" y="0.0" width="667" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VirtualStick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lo8-JD-Rsj">
+                                                    <rect key="frame" x="28" y="11.5" width="599" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lo8-JD-Rsj" secondAttribute="trailing" constant="20" id="7my-dR-u42"/>
+                                                <constraint firstItem="lo8-JD-Rsj" firstAttribute="leading" secondItem="KlB-K6-4Bd" secondAttribute="leadingMargin" constant="8" id="mOE-fI-bR0"/>
+                                                <constraint firstItem="lo8-JD-Rsj" firstAttribute="centerY" secondItem="KlB-K6-4Bd" secondAttribute="centerY" id="oE0-5j-myK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="shg-X1-NmD" kind="show" id="rVn-uS-v59"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -784,7 +808,6 @@
                             <constraint firstItem="wA1-Uf-vhH" firstAttribute="top" secondItem="xVy-oL-qOe" secondAttribute="bottom" constant="8" id="9uP-S5-V4z"/>
                             <constraint firstItem="5Og-kF-LYh" firstAttribute="top" secondItem="C8L-Hd-yTh" secondAttribute="bottom" constant="8" id="DJz-kv-Jo9"/>
                             <constraint firstItem="3uQ-qz-ZJP" firstAttribute="leading" secondItem="U4f-Zf-My3" secondAttribute="trailing" constant="13" id="EJQ-zb-g5i"/>
-                            <constraint firstItem="C8L-Hd-yTh" firstAttribute="centerX" secondItem="dG9-yn-2b9" secondAttribute="centerX" id="F4V-CU-8bx"/>
                             <constraint firstItem="wA1-Uf-vhH" firstAttribute="leading" secondItem="q8E-6O-nZa" secondAttribute="trailing" constant="8" id="GOX-jN-429"/>
                             <constraint firstItem="3uQ-qz-ZJP" firstAttribute="top" secondItem="q8E-6O-nZa" secondAttribute="bottom" constant="5" id="HDf-Vk-WbI"/>
                             <constraint firstItem="t27-kO-wYk" firstAttribute="top" secondItem="C8L-Hd-yTh" secondAttribute="bottom" constant="8" id="Hd2-00-XJB"/>
@@ -1226,8 +1249,257 @@
             </objects>
             <point key="canvasLocation" x="1919" y="1471"/>
         </scene>
+        <!--Simulator View Controller-->
+        <scene sceneID="IY9-9S-fpl">
+            <objects>
+                <viewController id="shg-X1-NmD" customClass="DJISimulatorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nOG-WA-CmN"/>
+                        <viewControllerLayoutGuide type="bottom" id="3MF-yd-L6C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="68W-gB-Tr4">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="343"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebj-ZN-i7o" userLabel="VirtualStick Left" customClass="VirtualStickView">
+                                <rect key="frame" x="10" y="207" width="130" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="stick_base" translatesAutoresizingMaskIntoConstraints="NO" id="p73-F5-11C">
+                                        <rect key="frame" x="-0.5" y="0.0" width="129" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="ier-TN-LQc"/>
+                                            <constraint firstAttribute="width" constant="129" id="rhI-Lh-aqa"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="stick_normal" translatesAutoresizingMaskIntoConstraints="NO" id="BJO-m9-jyt">
+                                        <rect key="frame" x="-0.5" y="0.0" width="129" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="129" id="6eZ-gK-bSf"/>
+                                            <constraint firstAttribute="height" constant="128" id="cxF-hx-09p"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BJO-m9-jyt" firstAttribute="centerY" secondItem="ebj-ZN-i7o" secondAttribute="centerY" id="86T-qe-lde"/>
+                                    <constraint firstItem="p73-F5-11C" firstAttribute="centerY" secondItem="ebj-ZN-i7o" secondAttribute="centerY" id="KkH-vQ-Kor"/>
+                                    <constraint firstItem="p73-F5-11C" firstAttribute="centerX" secondItem="ebj-ZN-i7o" secondAttribute="centerX" constant="-1" id="Lmq-wR-XRK"/>
+                                    <constraint firstAttribute="height" constant="128" id="ezv-EB-VEP"/>
+                                    <constraint firstAttribute="width" constant="130" id="rfV-PW-WAd"/>
+                                    <constraint firstItem="BJO-m9-jyt" firstAttribute="centerX" secondItem="ebj-ZN-i7o" secondAttribute="centerX" constant="-1" id="u12-ow-vrS"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="stickView" destination="BJO-m9-jyt" id="gHx-37-Rrf"/>
+                                    <outlet property="stickViewBase" destination="p73-F5-11C" id="Fh5-T3-vWs"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFS-vh-T4D" userLabel="VirtualStick Right" customClass="VirtualStickView">
+                                <rect key="frame" x="533" y="207" width="128" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="stick_base" translatesAutoresizingMaskIntoConstraints="NO" id="ZpH-vw-e7x">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="BYO-hQ-qrN"/>
+                                            <constraint firstAttribute="width" constant="128" id="x5h-88-qHe"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="stick_normal" translatesAutoresizingMaskIntoConstraints="NO" id="ozb-R1-GXu">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="NVY-qQ-fgj"/>
+                                            <constraint firstAttribute="width" constant="128" id="z6C-3M-FFO"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="CKK-5n-RRz"/>
+                                    <constraint firstItem="ZpH-vw-e7x" firstAttribute="centerX" secondItem="pFS-vh-T4D" secondAttribute="centerX" id="JFd-Yq-Vd1"/>
+                                    <constraint firstItem="ZpH-vw-e7x" firstAttribute="centerY" secondItem="pFS-vh-T4D" secondAttribute="centerY" id="Mta-qh-Z2c"/>
+                                    <constraint firstItem="ozb-R1-GXu" firstAttribute="centerX" secondItem="pFS-vh-T4D" secondAttribute="centerX" id="W6P-qc-Gs6"/>
+                                    <constraint firstAttribute="height" constant="128" id="kc4-yM-E09"/>
+                                    <constraint firstItem="ozb-R1-GXu" firstAttribute="centerY" secondItem="pFS-vh-T4D" secondAttribute="centerY" id="yNk-Ug-UHf"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="stickView" destination="ozb-R1-GXu" id="nwq-pT-m88"/>
+                                    <outlet property="stickViewBase" destination="ZpH-vw-e7x" id="ERv-Hg-bM9"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHJ-hc-E6f">
+                                <rect key="frame" x="8" y="17" width="144" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QJS-Fg-7O8"/>
+                                    <constraint firstAttribute="width" constant="144" id="z4l-nc-hxQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="EnterVirtualStickControl" backgroundImage="btn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onEnterVirtualStickControlButtonClicked:" destination="shg-X1-NmD" eventType="touchUpInside" id="pqe-0p-55f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iw0-Xn-SxQ">
+                                <rect key="frame" x="157" y="17" width="143" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="hFX-y5-wDN"/>
+                                    <constraint firstAttribute="height" constant="40" id="wJE-aw-sK6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="ExitVirtualStickControl" backgroundImage="btn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onExitVirtualStickControlButtonClicked:" destination="shg-X1-NmD" eventType="touchUpInside" id="j1z-Xz-d0V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltb-nk-naR">
+                                <rect key="frame" x="305" y="17" width="106" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="1vW-pv-niI"/>
+                                    <constraint firstAttribute="height" constant="40" id="eB6-k7-uoV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Start Simulator" backgroundImage="btn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSimulatorButtonClicked:" destination="shg-X1-NmD" eventType="touchUpInside" id="ehA-yJ-ySI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxD-8g-NCH">
+                                <rect key="frame" x="417" y="17" width="69" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="7b0-Nc-b6B"/>
+                                    <constraint firstAttribute="height" constant="40" id="WlE-mO-d7B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Takeoff" backgroundImage="btn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTakeoffButtonClicked:" destination="shg-X1-NmD" eventType="touchUpInside" id="DyF-c4-4r9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHD-MP-X8e">
+                                <rect key="frame" x="493" y="17" width="69" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cGC-Lk-Z6N"/>
+                                    <constraint firstAttribute="width" constant="69" id="rJS-bz-kM4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Land" backgroundImage="btn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLandButtonClicked:" destination="shg-X1-NmD" eventType="touchUpInside" id="cJf-EX-r1D"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simulator State" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="P7j-gj-OnD">
+                                <rect key="frame" x="8" y="145.5" width="653" height="47"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="18P-cH-hqN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5l-7i-rhg">
+                                <rect key="frame" x="8" y="74" width="144" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vBi-C8-S9r"/>
+                                    <constraint firstAttribute="width" constant="144" id="ybY-W3-aJM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Obstacle Avoidance" backgroundImage="btn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleObstacleAvoidance:" destination="shg-X1-NmD" eventType="touchUpInside" id="wpH-Fy-rTo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Soh-kZ-HmB">
+                                <rect key="frame" x="157" y="74" width="144" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="Rdf-7G-gYW"/>
+                                    <constraint firstAttribute="height" constant="40" id="VfT-HN-IxA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Pilot Assistance" backgroundImage="btn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="togglePilotAssistance:" destination="shg-X1-NmD" eventType="touchUpInside" id="vOJ-2H-Yi1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnM-gg-wr5">
+                                <rect key="frame" x="8" y="131" width="144" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="Cjf-xj-zUi"/>
+                                    <constraint firstAttribute="height" constant="40" id="GYd-Wh-qgL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Collision Avoidance" backgroundImage="btn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleCollisionAvoidance:" destination="shg-X1-NmD" eventType="touchUpInside" id="9Fy-wc-Vcu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ltb-nk-naR" firstAttribute="leading" secondItem="Iw0-Xn-SxQ" secondAttribute="trailing" constant="5" id="052-vl-cxx"/>
+                            <constraint firstItem="cHD-MP-X8e" firstAttribute="top" secondItem="nOG-WA-CmN" secondAttribute="bottom" constant="17" id="0Vq-wV-KUb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P7j-gj-OnD" secondAttribute="trailing" constant="-14" id="3Oz-XC-V6b"/>
+                            <constraint firstItem="q5l-7i-rhg" firstAttribute="top" secondItem="MHJ-hc-E6f" secondAttribute="bottom" constant="17" id="3sI-Cc-V7Y"/>
+                            <constraint firstItem="nxD-8g-NCH" firstAttribute="leading" secondItem="ltb-nk-naR" secondAttribute="trailing" constant="6" id="JkE-jW-pOe"/>
+                            <constraint firstItem="P7j-gj-OnD" firstAttribute="leading" secondItem="MHJ-hc-E6f" secondAttribute="leading" id="LA8-Zs-iAT"/>
+                            <constraint firstItem="Iw0-Xn-SxQ" firstAttribute="leading" secondItem="MHJ-hc-E6f" secondAttribute="trailing" constant="5" id="LE5-qC-xxo"/>
+                            <constraint firstItem="ebj-ZN-i7o" firstAttribute="leading" secondItem="68W-gB-Tr4" secondAttribute="leadingMargin" constant="-10" id="LL5-Z1-d4s"/>
+                            <constraint firstItem="q5l-7i-rhg" firstAttribute="leading" secondItem="MHJ-hc-E6f" secondAttribute="leading" id="MKB-iv-hFO"/>
+                            <constraint firstItem="Iw0-Xn-SxQ" firstAttribute="top" secondItem="nOG-WA-CmN" secondAttribute="bottom" constant="17" id="N3e-oV-9iw"/>
+                            <constraint firstItem="Soh-kZ-HmB" firstAttribute="leading" secondItem="q5l-7i-rhg" secondAttribute="trailing" constant="5" id="PSk-C5-cHY"/>
+                            <constraint firstItem="nxD-8g-NCH" firstAttribute="top" secondItem="nOG-WA-CmN" secondAttribute="bottom" constant="17" id="Q8U-CB-ctb"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="MHJ-hc-E6f" secondAttribute="leading" constant="12" id="Qdn-5d-N55"/>
+                            <constraint firstItem="pnM-gg-wr5" firstAttribute="top" secondItem="q5l-7i-rhg" secondAttribute="bottom" constant="17" id="Wcb-ZU-AM1"/>
+                            <constraint firstItem="Soh-kZ-HmB" firstAttribute="top" secondItem="Iw0-Xn-SxQ" secondAttribute="bottom" constant="17" id="cSd-5J-44v"/>
+                            <constraint firstItem="cHD-MP-X8e" firstAttribute="leading" secondItem="nxD-8g-NCH" secondAttribute="trailing" constant="7" id="dm6-1O-cnc"/>
+                            <constraint firstItem="pnM-gg-wr5" firstAttribute="leading" secondItem="q5l-7i-rhg" secondAttribute="leading" id="dxE-rr-gpF"/>
+                            <constraint firstItem="3MF-yd-L6C" firstAttribute="top" secondItem="ebj-ZN-i7o" secondAttribute="bottom" constant="8" id="gsb-GQ-p3Y"/>
+                            <constraint firstItem="3MF-yd-L6C" firstAttribute="top" secondItem="pFS-vh-T4D" secondAttribute="bottom" constant="8" id="hFQ-jm-Yk8"/>
+                            <constraint firstItem="ltb-nk-naR" firstAttribute="top" secondItem="nOG-WA-CmN" secondAttribute="bottom" constant="17" id="npq-up-vty"/>
+                            <constraint firstItem="P7j-gj-OnD" firstAttribute="centerY" secondItem="68W-gB-Tr4" secondAttribute="centerY" constant="-2.5" id="rr2-ah-oJ2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pFS-vh-T4D" secondAttribute="trailing" constant="-14" id="vNI-KG-u5l"/>
+                            <constraint firstItem="MHJ-hc-E6f" firstAttribute="top" secondItem="nOG-WA-CmN" secondAttribute="bottom" constant="17" id="yBm-AE-Vdw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collisionAvoidanceButton" destination="pnM-gg-wr5" id="f3I-va-nBM"/>
+                        <outlet property="obstacleAvoidanceButton" destination="q5l-7i-rhg" id="toT-7s-OZJ"/>
+                        <outlet property="pilotAssistanceButton" destination="Soh-kZ-HmB" id="Vzj-3g-IwA"/>
+                        <outlet property="simulatorButton" destination="ltb-nk-naR" id="Xsf-Mf-bEW"/>
+                        <outlet property="simulatorStateLabel" destination="P7j-gj-OnD" id="fCf-1y-BEN"/>
+                        <outlet property="view" destination="68W-gB-Tr4" id="6v8-Vs-Ujw"/>
+                        <outlet property="virtualStickLeft" destination="ebj-ZN-i7o" id="0NG-rc-Eon"/>
+                        <outlet property="virtualStickRight" destination="pFS-vh-T4D" id="LA0-NA-ZKj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8u4-eR-Hqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2633" y="1617"/>
+        </scene>
     </scenes>
     <resources>
         <image name="btn" width="16.5" height="34"/>
+        <image name="stick_base" width="128" height="128"/>
+        <image name="stick_normal" width="128" height="128"/>
     </resources>
 </document>

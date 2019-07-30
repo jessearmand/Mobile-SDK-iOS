@@ -11,5 +11,9 @@
 
 #import "DJIWidget/DJIWidget.h"
 
+#import "DemoUtility.h"
+#import "VirtualStickView.h"
+#import "DJISimulatorViewController.h"
+
 #endif /* Header_h */
 
