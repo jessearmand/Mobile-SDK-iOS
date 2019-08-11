@@ -372,15 +372,15 @@
 
 -(void) setThrottle:(float)y andYaw:(float)x
 {
-    self.mThrottle = y * -2;
+    self.mThrottle = y * -0.5;
     self.mYaw = x * 30;
     
     [self updateVirtualStick];
 }
 
 -(void) setXVelocity:(float)x andYVelocity:(float)y {
-    self.mXVelocity = x * 15.0;
-    self.mYVelocity = y * 15.0;
+    self.mXVelocity = x * 0.5;
+    self.mYVelocity = y * 0.5;
     [self updateVirtualStick];
 }
 
